@@ -22,8 +22,10 @@ const getPost = () => {
   return fetch("https://reactnative.dev/movies.json")
     .then((response) => response.json())
     .then((json) => {
-      if (json.movies[0].id == 1) {
-        console.log(Platform.OS);
+      if (json.movies[0].title == "Star Warsss") {
+        console.log("var");
+      } else {
+          console.log("yok");
       }
     })
     .catch((error) => {
