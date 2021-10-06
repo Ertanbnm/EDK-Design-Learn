@@ -99,7 +99,7 @@ const Login = () => {
                                     color: "#067dc1",
                                 }}
                             >
-                                Şifremi Unuttum
+                                Şifremi UnuttumTest
                             </Text>
                         </View>
                     </View>
