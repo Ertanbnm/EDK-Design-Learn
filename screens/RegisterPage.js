@@ -25,7 +25,7 @@ const getPost = () => {
       if (json.movies[0].title == "Star Warsss") {
         console.log("var");
       } else {
-        console.log("yok");
+          console.log("yok");
       }
     })
     .catch((error) => {
@@ -33,7 +33,7 @@ const getPost = () => {
     });
 };
 
-const Login = () => {
+const Register = () => {
   const [checked, setChecked] = useState(false);
 
   return (
@@ -49,6 +49,14 @@ const Login = () => {
         </View>
 
         <View>
+
+        <TextInput
+            style={Platform.OS === "web" ? styles.inputweb : styles.input}
+            mode="outlined"
+            label="İsim Soyisim"
+            theme={{ roundness: 10, colors: { primary: "#067dc1" } }}
+          />
+
           <TextInput
             style={Platform.OS === "web" ? styles.inputweb : styles.input}
             mode="outlined"
@@ -60,6 +68,12 @@ const Login = () => {
               style={Platform.OS === "web" ? styles.inputweb : styles.input}
               mode="outlined"
               label="Şifre"
+              theme={{ roundness: 10, colors: { primary: "#067dc1" } }}
+            />
+            <TextInput
+              style={Platform.OS === "web" ? styles.inputweb : styles.input}
+              mode="outlined"
+              label="Tekrar Şifre"
               theme={{ roundness: 10, colors: { primary: "#067dc1" } }}
             />
           </View>
@@ -91,7 +105,8 @@ const Login = () => {
               />
             </TouchableOpacity>
 
-            <Text>Beni Hatırla</Text>
+            <Text>Gizlilik Politikasını kabul ediyorum.</Text>
+          
           </View>
 
           <View
@@ -109,79 +124,18 @@ const Login = () => {
               contentStyle={{ height: 50, justifyContent: "center" }} // eğer bunu eklemezsen butona tıklayınca tıklama alanın kücük gözükür.
               onPress={getPost}
             >
-              Giriş Yap
+              Kayıt Ol
             </Button>
-            <View style={{ alignItems: "center", paddingTop: 20 }}>
-              <Text
-                style={{
-                  justifyContent: "center",
-                  color: "#067dc1",
-                }}
-              >
-                Şifremi Unuttum
-              </Text>
-            </View>
           </View>
         </View>
 
-        <View style={{ position: "absolute", left: 0, right: 0, bottom: 0 }}>
-          
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
-            <View
-              style={{
-                flex: 1,
-                height: 1,
-                backgroundColor: "#f0f0f0",
-                marginTop: 9,
-              }}
-            />
-
-            <Text
-              style={{
-                color: "#067dc1",
-                marginTop: 15,
-                marginBottom: 5,
-                width: 175,
-                textAlign: "center",
-              }}
-            >
-              Sosyal Ağ ile Oturum Aç
-            </Text>
-            <View
-              style={{
-                flex: 1,
-                height: 1,
-                backgroundColor: "#f0f0f0",
-                marginTop: 9,
-              }}
-            />
-            <View style={{ flexDirection: "row", alignItems: "center" }}></View>
-          </View>
-          <View style={{ flexDirection: "row", justifyContent: "center" }}>
-            <SocialIcon style={{ marginLeft: 10 }} type="facebook" />
-
-            {Platform.OS == "android" ? (
-              <SocialIcon style={{ marginLeft: 20 }} type="google" />
-            ) : Platform.OS == "ios" ? (
-              <SocialIcon
-                light
-                style={{ marginLeft: 20 }}
-                iconColor="#000"
-                type="apple"
-              />
-            ) : (
-              <SocialIcon style={{ marginLeft: 20 }} type="google" />
-            )}
-
-            <SocialIcon style={{ marginLeft: 20 }} type="instagram" />
-          </View>
-        </View>
+        
       </View>
     </>
   );
 };
 
-export default Login;
+export default Register;
 
 const styles = StyleSheet.create({
   container: {
