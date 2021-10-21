@@ -12,7 +12,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
        
-      <Stack.Screen name="Register" component={Register} options={{headerShown: false}} />
+      <Stack.Screen name="Register" component={Login} options={{headerShown: false}} />
        
        
         {/* <Stack.Screen
