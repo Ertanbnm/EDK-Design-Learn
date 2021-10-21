@@ -225,7 +225,7 @@ const styles = StyleSheet.create({
   },
 
   input: {
- height: 48,
+ height: 48, //problem
   },
 
   inputweb: {
